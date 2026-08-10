@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neubauprojekt Sägeweg 53, Therwil — Marken-Moodboard</title>
+
+<!-- Google Fonts: 4 eigenstaendige Paarungen, eine pro Namenskonzept -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Karla:wght@400;500;600&family=Petrona:ital,wght@0,400;0,500;0,600;1,400&family=Public+Sans:wght@400;500;600&family=Piazzolla:ital,wght@0,400;0,500;0,600;1,400&family=Archivo:wght@400;500;600&family=Faustina:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    color-scheme: light;
+    --transition-speed: 0.5s;
+    --transition-curve: cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  /* Konzept: SÄGIHOF — Holzbau, Handwerk, erdig-warm */
+  .theme-saegihof {
+    --color-primary: #4A3F35;
+    --color-secondary: #A69386;
+    --color-accent: #9C6440;
+    --color-background: #F2EEE7;
+    --color-contrast: #2E2620;
+    --font-heading: 'Domine', serif;
+    --font-body: 'Karla', sans-serif;
+    --border-radius: 6px;
+  }
+
+  /* Konzept: LEIMENPARK — Innenhof, Grün, Familie */
+  .theme-leimenpark {
+    --color-primary: #435A49;
+    --color-secondary: #BDBBB0;
+    --color-accent: #916A34;
+    --color-background: #F1EFE9;
+    --color-contrast: #2A322C;
+    --font-heading: 'Petrona', serif;
+    --font-body: 'Public Sans', sans-serif;
+    --border-radius: 14px;
+  }
+
+  /* Konzept: ENSEMBLE 53 — architektonisch, urban, zurückhaltend */
+  .theme-ensemble53 {
+    --color-primary: #3E3A3A;
+    --color-secondary: #BDB8B4;
+    --color-accent: #56636B;
+    --color-background: #DCD9D1;
+    --color-contrast: #211F1E;
+    --font-heading: 'Piazzolla', serif;
+    --font-body: 'Archivo', sans-serif;
+    --border-radius: 2px;
+  }
+
+  /* Konzept: BIZI THERWIL — frisch, zugänglich, Dialekt-Claim */
+  .theme-bizitherwil {
+    --color-primary: #5C7A5E;
+    --color-secondary: #C7B8A6;
+    --color-accent: #B85A34;
+    --color-background: #F8F4EC;
+    --color-contrast: #2C332B;
+    --font-heading: 'Faustina', serif;
+    --font-body: 'IBM Plex Sans', sans-serif;
+    --border-radius: 20px;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-contrast);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    padding-top: 100px;
+    transition: background-color var(--transition-speed) var(--transition-curve), color var(--transition-speed) var(--transition-curve);
+  }
+
+  #moodboard-header {
+    position: fixed; top: 0; left: 0; right: 0; height: 80px;
+    padding: 0 5%; display: flex; justify-content: space-between; align-items: center;
+    z-index: 1000; background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .header-logo {
+    font-family: var(--font-heading); font-weight: 600; font-size: 1.25rem; letter-spacing: 0.03em;
+    transition: font-family var(--transition-speed);
+  }
+
+  .switcher-container { display: flex; gap: 10px; flex-wrap: wrap; }
+
+  .switch-btn {
+    padding: 8px 16px; border: 1px solid rgba(0,0,0,0.15); border-radius: 50px; background: transparent;
+    font-family: var(--font-body); font-size: 0.8rem; font-weight: 500; cursor: pointer; transition: all 0.3s ease;
+    color: #3a3632;
+  }
+
+  .switch-btn.active {
+    background-color: var(--color-primary); color: #ffffff; border-color: var(--color-primary);
+  }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  section { margin-bottom: 80px; }
+
+  .section-title {
+    font-family: var(--font-heading); font-size: 2rem; color: var(--color-primary); margin-bottom: 30px;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem; opacity: 0.75; margin: -20px 0 30px; max-width: 640px;
+  }
+
+  /* SECTION 1: Hero */
+  .hero-grid {
+    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 30px;
+    background: #ffffff; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+  }
+
+  .hero-img-box { min-height: 420px; background: var(--color-secondary); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .hero-img-box::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(155deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    opacity: 0.9;
+  }
+  .hero-img-placeholder-text {
+    position: relative; z-index: 1; color: #fff; font-family: var(--font-heading); font-size: 1rem;
+    letter-spacing: 0.08em; text-transform: uppercase; text-align: center; padding: 0 40px; opacity: 0.9;
+  }
+
+  .hero-info-box { padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+
+  .concept-tag {
+    color: var(--color-accent); font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.75rem;
+  }
+
+  .hero-tagline { font-family: var(--font-heading); font-size: 2.4rem; margin: 15px 0; color: var(--color-primary); }
+
+  .hero-name-note { font-size: 0.9rem; font-style: italic; opacity: 0.8; margin-bottom: 16px; border-left: 2px solid var(--color-accent); padding-left: 12px; }
+
+  .badge-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+
+  .material-badge {
+    font-size: 0.75rem; padding: 6px 12px; border-radius: 50px;
+    background: var(--color-secondary); color: var(--color-contrast);
+  }
+
+  /* SECTION 2: Farbpalette */
+  .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+
+  .swatch-card {
+    background: #ffffff; border-radius: var(--border-radius); overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05); cursor: pointer; transition: transform 0.25s ease;
+  }
+  .swatch-card:hover { transform: translateY(-4px); }
+
+  .swatch-color { height: 110px; transition: background-color var(--transition-speed) var(--transition-curve); }
+  .swatch-details { padding: 14px; }
+  .swatch-role { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); font-weight: 600; }
+  .swatch-name { font-weight: 600; margin: 4px 0 2px; }
+  .swatch-hex { font-size: 0.8rem; opacity: 0.7; font-family: monospace; }
+  .swatch-desc { font-size: 0.75rem; opacity: 0.75; margin-top: 6px; }
+
+  /* SECTION 3: Typografie */
+  .typo-section {
+    background: var(--color-primary); color: var(--color-background);
+    border-radius: var(--border-radius); padding: 50px;
+  }
+  .typo-section .section-title { color: var(--color-background); }
+  .typo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+  .typo-info h4 { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
+  .typo-font-name { font-weight: 600; margin-bottom: 16px; color: var(--color-accent); }
+  .typo-preview-large { font-family: var(--font-heading); font-size: 2.4rem; line-height: 1.2; }
+  .typo-preview-body { font-family: var(--font-body); font-size: 1rem; opacity: 0.9; }
+
+  /* SECTION 4: Logo-Platzhalter */
+  .logo-cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+  .logo-box-card {
+    background: #ffffff; border-radius: var(--border-radius); padding: 30px;
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  }
+  .logo-placeholder-wrap {
+    height: 140px; width: 100%; display: flex; align-items: center; justify-content: center;
+    border: 1.5px dashed var(--color-secondary); border-radius: calc(var(--border-radius) - 2px);
+    text-align: center; padding: 12px;
+  }
+  .logo-placeholder-name { font-family: var(--font-heading); font-size: 1.3rem; color: var(--color-primary); }
+  .logo-placeholder-label {
+    font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-accent); font-weight: 600; text-align: center;
+  }
+  .logo-placeholder-note { font-size: 0.75rem; opacity: 0.6; text-align: center; }
+
+  /* SECTION 5: Live UI- & Button-Vorschau */
+  .mockup-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 30px; align-items: start; }
+
+  .ui-card {
+    background: #ffffff; border-radius: var(--border-radius); overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  }
+  .ui-card-header { background: var(--color-primary); color: var(--color-background); padding: 24px 28px; }
+  .ui-card-subtitle { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.8; }
+  .ui-card-title { font-family: var(--font-heading); font-size: 1.6rem; margin-top: 4px; }
+  .ui-card-body { padding: 24px 28px; }
+  .ui-card-desc { font-size: 0.95rem; margin-bottom: 20px; }
+  .ui-card-meta { display: flex; justify-content: space-between; align-items: center; }
+  .ui-card-price { font-weight: 700; color: var(--color-primary); }
+  .ui-card-status {
+    font-size: 0.75rem; font-weight: 600; padding: 6px 12px; border-radius: 50px;
+    background: var(--color-secondary); color: var(--color-contrast);
+  }
+
+  .button-mockups { display: flex; flex-direction: column; gap: 16px; }
+
+  .mockup-btn {
+    padding: 14px 24px; border-radius: var(--border-radius); font-family: var(--font-body);
+    font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; border: 2px solid transparent;
+  }
+  .mockup-btn-primary { background: var(--color-primary); color: #ffffff; }
+  .mockup-btn-primary:hover { opacity: 0.85; }
+  .mockup-btn-secondary { background: transparent; color: var(--color-primary); border-color: var(--color-primary); }
+  .mockup-btn-secondary:hover { background: var(--color-primary); color: #ffffff; }
+  .mockup-btn-accent { background: var(--color-accent); color: #ffffff; }
+  .mockup-btn-accent:hover { opacity: 0.85; }
+
+  footer { text-align: center; padding: 40px 0 60px; font-size: 0.8rem; opacity: 0.6; }
+
+  .toast-box {
+    position: fixed; bottom: 30px; left: 50%; transform: translate(-50%, 20px);
+    background: var(--color-contrast); color: var(--color-background);
+    padding: 14px 24px; border-radius: 50px; display: flex; align-items: center; gap: 10px;
+    font-size: 0.85rem; opacity: 0; pointer-events: none; transition: all 0.35s ease; z-index: 2000;
+  }
+  .toast-box.show { opacity: 1; transform: translate(-50%, 0); }
+  .toast-check { color: var(--color-accent); font-weight: 700; }
+
+  @media (max-width: 1000px) { .palette-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 850px) {
+    .hero-grid, .typo-grid, .logo-cards-grid, .mockup-grid { grid-template-columns: 1fr; }
+    .switcher-container { gap: 6px; }
+    .switch-btn { padding: 6px 10px; font-size: 0.7rem; }
+  }
+</style>
+</head>
+<body class="theme-saegihof">
+  <header id="moodboard-header">
+    <div class="header-logo" id="header-logo-name">Sägihof</div>
+    <div class="switcher-container">
+      <button class="switch-btn active" onclick="switchTheme('theme-saegihof', this)">Sägihof</button>
+      <button class="switch-btn" onclick="switchTheme('theme-leimenpark', this)">Leimenpark</button>
+      <button class="switch-btn" onclick="switchTheme('theme-ensemble53', this)">Ensemble 53</button>
+      <button class="switch-btn" onclick="switchTheme('theme-bizitherwil', this)">Bizi Therwil</button>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- SECTION 1: Hero -->
+    <section id="mood-hero">
+      <div class="hero-grid">
+        <div class="hero-img-box">
+          <div class="hero-img-placeholder-text">Architektur-Rendering<br>folgt</div>
+        </div>
+        <div class="hero-info-box">
+          <div class="concept-tag" id="hero-concept-tag">Sägihof</div>
+          <h1 class="hero-tagline" id="hero-tagline">Der Hof am Sägeweg.</h1>
+          <p class="hero-name-note" id="hero-name-note">Der Name nimmt die Lage am Sägeweg auf und verweist auf das Solitärgebäude in Holzbauweise – handwerklich, geerdet, mit sichtbarer Massstäblichkeit.</p>
+          <p id="hero-description">53 Eigentumswohnungen in vier Baukörpern, gruppiert um einen begrünten Innenhof mit Kinderspielplatz. Die Grundrisse reichen von der kompakten 2,5-Zimmer-Wohnung bis zum weitläufigen 4,5-Zimmer-Zuhause, jede mit eigener Loggia oder eigenem Garten zum Hof. Ein grosszügiges Käuferbudget macht den Innenausbau zur eigenen Entscheidung – von der Küche bis zum Bad.</p>
+          <div class="badge-wrap" id="hero-badges"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: Farbpalette -->
+    <section id="mood-colors">
+      <h2 class="section-title">Das 5-Farben-Modell</h2>
+      <div class="palette-grid" id="palette-grid"></div>
+    </section>
+
+    <!-- SECTION 3: Typografie -->
+    <section id="mood-typography">
+      <div class="typo-section">
+        <h2 class="section-title">Typografie &amp; Schriftmuster</h2>
+        <div class="typo-grid">
+          <div class="typo-info">
+            <h4>Überschriften-Schriftart</h4>
+            <div class="typo-font-name" id="typo-heading-name">Domine</div>
+            <div class="typo-preview-large">Sägeweg 53, Therwil</div>
+          </div>
+          <div class="typo-info">
+            <h4>Fliesstext-Schriftart</h4>
+            <div class="typo-font-name" id="typo-body-name">Karla</div>
+            <p class="typo-preview-body">Grosszügige Grundrisse, ein begrünter Innenhof und ein individuell gestaltbarer Innenausbau: 53 Eigentumswohnungen für Singles, Paare und Familien in Therwil.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: Logo-Varianten (Platzhalter) -->
+    <section id="mood-logos">
+      <h2 class="section-title">Logo-Varianten</h2>
+      <p class="section-subtitle">Platzhalter — die eigentliche Logoentwicklung (Wortmarke, Signet, Kombination) folgt in der nächsten Phase, sobald ein Konzept gewählt ist.</p>
+      <div class="logo-cards-grid">
+        <div class="logo-box-card">
+          <div class="logo-placeholder-wrap"><span class="logo-placeholder-name" id="logo-name-1">Sägihof</span></div>
+          <div class="logo-placeholder-label">Wortmarke — Platzhalter</div>
+          <div class="logo-placeholder-note">Logo folgt</div>
+        </div>
+        <div class="logo-box-card">
+          <div class="logo-placeholder-wrap"><span class="logo-placeholder-name" id="logo-name-2">Sägihof</span></div>
+          <div class="logo-placeholder-label">Signet — Platzhalter</div>
+          <div class="logo-placeholder-note">Logo folgt</div>
+        </div>
+        <div class="logo-box-card">
+          <div class="logo-placeholder-wrap"><span class="logo-placeholder-name" id="logo-name-3">Sägihof</span></div>
+          <div class="logo-placeholder-label">Kombination — Platzhalter</div>
+          <div class="logo-placeholder-note">Logo folgt</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: Live UI- & Button-Vorschau -->
+    <section id="mood-ui">
+      <h2 class="section-title">Live UI- &amp; Button-Vorschau</h2>
+      <div class="mockup-grid">
+        <div class="ui-card">
+          <div class="ui-card-header">
+            <div class="ui-card-subtitle">Neubauprojekt Therwil</div>
+            <div class="ui-card-title" id="ui-card-title">Sägihof</div>
+          </div>
+          <div class="ui-card-body">
+            <p class="ui-card-desc">3,5-Zimmer-Wohnung mit Loggia zum begrünten Innenhof.</p>
+            <div class="ui-card-meta">
+              <span class="ui-card-price">Preis auf Anfrage</span>
+              <span class="ui-card-status">Vermarktungsstart</span>
+            </div>
+          </div>
+        </div>
+        <div class="button-mockups">
+          <button class="mockup-btn mockup-btn-primary">Wohnung reservieren</button>
+          <button class="mockup-btn mockup-btn-secondary">Grundriss ansehen</button>
+          <button class="mockup-btn mockup-btn-accent">Beratungstermin</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p id="footer-text">&copy; 2026 Sägeweg 53, Therwil. Marken-Moodboard, Konzept „Sägihof“.</p>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast-box">
+    <span class="toast-check">&#10003;</span>
+    <span id="toast-message">HEX-Code kopiert!</span>
+  </div>
+
+  <script>
+    const CONCEPTS = {
+      'theme-saegihof': {
+        name: 'Sägihof',
+        tagline: 'Der Hof am Sägeweg.',
+        nameNote: 'Der Name nimmt die Lage am Sägeweg auf und verweist auf das Solitärgebäude in Holzbauweise – handwerklich, geerdet, mit sichtbarer Massstäblichkeit.',
+        badges: ['Holzbau-Solitär', 'Begrünter Innenhof', 'Photovoltaik', 'Individueller Ausbau'],
+        headingFontLabel: 'Domine',
+        bodyFontLabel: 'Karla',
+        swatches: [
+          { role: 'Hauptfarbe',     name: 'Walnussbraun',     hex: '#4A3F35', desc: 'Erdig, geerdet – Referenz an die Holzbauweise des Solitärs.' },
+          { role: 'Sekundärfarbe',  name: 'Taupe-Sand',       hex: '#A69386', desc: 'Warmer Naturton, ruhiger Kontrast zum dunklen Primärton.' },
+          { role: 'Akzentfarbe',    name: 'Kupfer-Terracotta',hex: '#9C6440', desc: 'Gedeckter Kupferton, sparsam für Highlights und CTAs.' },
+          { role: 'Hintergrund',    name: 'Kalkweiss',        hex: '#F2EEE7', desc: 'Warmes Off-White als ruhige Grundfläche.' },
+          { role: 'Kontrast',       name: 'Espresso',         hex: '#2E2620', desc: 'Fliesstextfarbe, kein reines Schwarz.' }
+        ]
+      },
+      'theme-leimenpark': {
+        name: 'Leimenpark',
+        tagline: 'Grün mitten im Leimental.',
+        nameNote: 'Leimenpark verbindet die Region – das Leimental – mit dem parkähnlichen Innenhof, der als grüne Mitte der Überbauung dient.',
+        badges: ['Begrünter Innenhof', 'Kinderspielplatz', 'Private Gärten', 'Individueller Ausbau'],
+        headingFontLabel: 'Petrona',
+        bodyFontLabel: 'Public Sans',
+        swatches: [
+          { role: 'Hauptfarbe',     name: 'Waldgrün',        hex: '#435A49', desc: 'Gedecktes Grün, abgeleitet vom parkähnlichen Innenhof.' },
+          { role: 'Sekundärfarbe',  name: 'Steingrau',       hex: '#BDBBB0', desc: 'Neutraler Begleitton für Flächen und Badges.' },
+          { role: 'Akzentfarbe',    name: 'Senfocker',       hex: '#916A34', desc: 'Warmer Ockerton, erinnert an Kiesweg und Spielplatzholz.' },
+          { role: 'Hintergrund',    name: 'Sandweiss',       hex: '#F1EFE9', desc: 'Helle, sandige Grundfläche.' },
+          { role: 'Kontrast',       name: 'Tiefgrün-Schwarz',hex: '#2A322C', desc: 'Fliesstextfarbe, kein reines Schwarz.' }
+        ]
+      },
+      'theme-ensemble53': {
+        name: 'Ensemble 53',
+        tagline: 'Vier Häuser, ein Ensemble.',
+        nameNote: '53 steht für die Anzahl Wohnungen und Tiefgaragenplätze, Ensemble für das Zusammenspiel der vier Baukörper um den gemeinsamen Hof.',
+        badges: ['4 Baukörper', 'Barrierefrei nach SIA 500', 'Aluminium-Fensterrahmen', 'Tiefgarage, 53 Plätze'],
+        headingFontLabel: 'Piazzolla',
+        bodyFontLabel: 'Archivo',
+        swatches: [
+          { role: 'Hauptfarbe',     name: 'Anthrazit',       hex: '#3E3A3A', desc: 'Zurückhaltender, urbaner Ankerton.' },
+          { role: 'Sekundärfarbe',  name: 'Warmgrau',        hex: '#BDB8B4', desc: 'Steinige Begleitfarbe für ruhige Flächen.' },
+          { role: 'Akzentfarbe',    name: 'Graphitblau',     hex: '#56636B', desc: 'Kühler Metallton, angelehnt an die Aluminium-Fensterrahmen.' },
+          { role: 'Hintergrund',    name: 'Steinlicht',      hex: '#DCD9D1', desc: 'Helle Steinfläche als Grundton.' },
+          { role: 'Kontrast',       name: 'Tiefschwarz-Warm',hex: '#211F1E', desc: 'Fliesstextfarbe, kein reines Schwarz.' }
+        ]
+      },
+      'theme-bizitherwil': {
+        name: 'Bizi Therwil',
+        tagline: 'Dihei, bi Therwil.',
+        nameNote: 'Der Name holt den Alltag der Region in die Marke – unprätentiös, direkt, mit einem Augenzwinkern für alle, die in Therwil ankommen wollen.',
+        badges: ['Nähe zu Basel', 'Kinderfreundliche Gemeinde', 'Aktives Vereinsleben', 'Individueller Ausbau'],
+        headingFontLabel: 'Faustina',
+        bodyFontLabel: 'IBM Plex Sans',
+        swatches: [
+          { role: 'Hauptfarbe',     name: 'Frühlingsgrün',   hex: '#5C7A5E', desc: 'Frischer, hellerer Grünton für ein zugängliches Auftreten.' },
+          { role: 'Sekundärfarbe',  name: 'Helltaupe',       hex: '#C7B8A6', desc: 'Warme, helle Begleitfarbe.' },
+          { role: 'Akzentfarbe',    name: 'Ziegelterracotta',hex: '#B85A34', desc: 'Lebendiger Terracottaton für Akzente und CTAs.' },
+          { role: 'Hintergrund',    name: 'Warmweiss',       hex: '#F8F4EC', desc: 'Helle, freundliche Grundfläche.' },
+          { role: 'Kontrast',       name: 'Dunkelgrün-Braun',hex: '#2C332B', desc: 'Fliesstextfarbe, kein reines Schwarz.' }
+        ]
+      }
+    };
+
+    function renderConcept(themeClass) {
+      const c = CONCEPTS[themeClass];
+      if (!c) return;
+
+      document.getElementById('header-logo-name').textContent = c.name;
+      document.getElementById('hero-concept-tag').textContent = c.name;
+      document.getElementById('hero-tagline').textContent = c.tagline;
+      document.getElementById('hero-name-note').textContent = c.nameNote;
+      document.getElementById('typo-heading-name').textContent = c.headingFontLabel;
+      document.getElementById('typo-body-name').textContent = c.bodyFontLabel;
+      document.getElementById('ui-card-title').textContent = c.name;
+      document.getElementById('logo-name-1').textContent = c.name;
+      document.getElementById('logo-name-2').textContent = c.name;
+      document.getElementById('logo-name-3').textContent = c.name;
+      document.getElementById('footer-text').innerHTML = '&copy; 2026 Sägeweg 53, Therwil. Marken-Moodboard, Konzept „' + c.name + '“.';
+
+      document.getElementById('hero-badges').innerHTML = c.badges
+        .map(b => `<span class="material-badge">${b}</span>`)
+        .join('');
+
+      document.getElementById('palette-grid').innerHTML = c.swatches.map(s => `
+        <div class="swatch-card" onclick="copyHex('${s.hex}', '${s.name}')">
+          <div class="swatch-color" style="background-color: ${s.hex};"></div>
+          <div class="swatch-details">
+            <div class="swatch-role">${s.role}</div>
+            <div class="swatch-name">${s.name}</div>
+            <div class="swatch-hex">${s.hex}</div>
+            <div class="swatch-desc">${s.desc}</div>
+          </div>
+        </div>`).join('');
+    }
+
+    function switchTheme(themeClass, btn) {
+      document.body.className = themeClass;
+      document.querySelectorAll('.switch-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderConcept(themeClass);
+    }
+
+    function copyHex(hex, name) {
+      navigator.clipboard.writeText(hex).then(() => {
+        const toast = document.getElementById('toast');
+        document.getElementById('toast-message').innerHTML = `Farbton <strong>${name}</strong> (${hex}) kopiert!`;
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2500);
+      });
+    }
+
+    renderConcept('theme-saegihof');
+  </script>
+</body>
+</html>
