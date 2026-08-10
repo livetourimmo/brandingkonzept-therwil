@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Neubauprojekt Sägeweg 53, Therwil — Marken-Moodboard</title>
+<title>Neubauprojekt Therwil: Marken-Moodboard</title>
 
 <!-- Google Fonts: 4 eigenstaendige Paarungen, eine pro Namenskonzept -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Karla:wght@400;500;600&family=Petrona:ital,wght@0,400;0,500;0,600;1,400&family=Public+Sans:wght@400;500;600&family=Piazzolla:ital,wght@0,400;0,500;0,600;1,400&family=Archivo:wght@400;500;600&family=Faustina:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Domine:wght@400;500;600;700&family=Karla:wght@400;500;600&family=Petrona:ital,wght@0,400;0,500;0,600;1,400&family=Public+Sans:wght@400;500;600&family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&family=Faustina:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -19,7 +19,7 @@
     --transition-curve: cubic-bezier(0.25, 1, 0.5, 1);
   }
 
-  /* Konzept: SÄGIHOF — Holzbau, Handwerk, erdig-warm */
+  /* Konzept: SÄGIHOF: Holzbau, Handwerk, erdig-warm */
   .theme-saegihof {
     --color-primary: #4A3F35;
     --color-secondary: #A69386;
@@ -31,7 +31,7 @@
     --border-radius: 6px;
   }
 
-  /* Konzept: LEIMENPARK — Innenhof, Grün, Familie */
+  /* Konzept: LEIMENPARK: Innenhof, Grün, Familie */
   .theme-leimenpark {
     --color-primary: #435A49;
     --color-secondary: #BDBBB0;
@@ -43,23 +43,23 @@
     --border-radius: 14px;
   }
 
-  /* Konzept: ENSEMBLE 53 — architektonisch, urban, zurückhaltend */
+  /* Konzept: ENSEMBLE 53: architektonisch, urban, zurückhaltend */
   .theme-ensemble53 {
-    --color-primary: #3E3A3A;
-    --color-secondary: #BDB8B4;
-    --color-accent: #56636B;
-    --color-background: #DCD9D1;
-    --color-contrast: #211F1E;
-    --font-heading: 'Piazzolla', serif;
-    --font-body: 'Archivo', sans-serif;
+    --color-primary: #6E5D50;
+    --color-secondary: #A69386;
+    --color-accent: #7C6330;
+    --color-background: #E7E1D6;
+    --color-contrast: #2A2726;
+    --font-heading: 'Frank Ruhl Libre', serif;
+    --font-body: 'Work Sans', sans-serif;
     --border-radius: 2px;
   }
 
-  /* Konzept: BIZI THERWIL — frisch, zugänglich, Dialekt-Claim */
+  /* Konzept: BIZI THERWIL: frisch, zugänglich, historischer Flurname */
   .theme-bizitherwil {
     --color-primary: #5C7A5E;
     --color-secondary: #C7B8A6;
-    --color-accent: #B85A34;
+    --color-accent: #A8502E;
     --color-background: #F8F4EC;
     --color-contrast: #2C332B;
     --font-heading: 'Faustina', serif;
@@ -118,16 +118,8 @@
     background: #ffffff; border-radius: var(--border-radius); overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.04);
   }
 
-  .hero-img-box { min-height: 420px; background: var(--color-secondary); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-  .hero-img-box::before {
-    content: ''; position: absolute; inset: 0;
-    background: linear-gradient(155deg, var(--color-primary) 0%, var(--color-secondary) 100%);
-    opacity: 0.9;
-  }
-  .hero-img-placeholder-text {
-    position: relative; z-index: 1; color: #fff; font-family: var(--font-heading); font-size: 1rem;
-    letter-spacing: 0.08em; text-transform: uppercase; text-align: center; padding: 0 40px; opacity: 0.9;
-  }
+  .hero-img-box { min-height: 420px; background: var(--color-secondary); position: relative; overflow: hidden; }
+  .hero-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity var(--transition-speed) var(--transition-curve); }
 
   .hero-info-box { padding: 40px; display: flex; flex-direction: column; justify-content: center; }
 
@@ -170,7 +162,7 @@
   .typo-section .section-title { color: var(--color-background); }
   .typo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
   .typo-info h4 { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.7; margin-bottom: 8px; }
-  .typo-font-name { font-weight: 600; margin-bottom: 16px; color: var(--color-accent); }
+  .typo-font-name { font-weight: 600; margin-bottom: 16px; color: var(--color-background); }
   .typo-preview-large { font-family: var(--font-heading); font-size: 2.4rem; line-height: 1.2; }
   .typo-preview-body { font-family: var(--font-body); font-size: 1rem; opacity: 0.9; }
 
@@ -261,13 +253,13 @@
     <section id="mood-hero">
       <div class="hero-grid">
         <div class="hero-img-box">
-          <div class="hero-img-placeholder-text">Architektur-Rendering<br>folgt</div>
+          <img id="hero-rendering-img" class="hero-img" src="assets/EXT-2_F-scaled.webp" alt="Architektur-Visualisierung Therwil">
         </div>
         <div class="hero-info-box">
           <div class="concept-tag" id="hero-concept-tag">Sägihof</div>
           <h1 class="hero-tagline" id="hero-tagline">Der Hof am Sägeweg.</h1>
-          <p class="hero-name-note" id="hero-name-note">Der Name nimmt die Lage am Sägeweg auf und verweist auf das Solitärgebäude in Holzbauweise – handwerklich, geerdet, mit sichtbarer Massstäblichkeit.</p>
-          <p id="hero-description">53 Eigentumswohnungen in vier Baukörpern, gruppiert um einen begrünten Innenhof mit Kinderspielplatz. Die Grundrisse reichen von der kompakten 2,5-Zimmer-Wohnung bis zum weitläufigen 4,5-Zimmer-Zuhause, jede mit eigener Loggia oder eigenem Garten zum Hof. Ein grosszügiges Käuferbudget macht den Innenausbau zur eigenen Entscheidung – von der Küche bis zum Bad.</p>
+          <p class="hero-name-note" id="hero-name-note">Der Name leitet sich direkt von der Adresse am Sägeweg ab. Sägi klingt vertraut und schweizerisch, Hof steht für den gemeinsamen Garten in der Mitte der Gebäude. Ausserdem erinnert der Name an Holz, was gut zum vorderen Gebäude passt, das in Holzbauweise erstellt wird.</p>
+          <p id="hero-description">53 Eigentumswohnungen in vier Baukörpern, gruppiert um einen begrünten Innenhof mit Kinderspielplatz. Die Grundrisse reichen von der kompakten 2,5-Zimmer-Wohnung bis zum weitläufigen 4,5-Zimmer-Zuhause, jede mit eigener Loggia oder eigenem Garten zum Hof. Ein grosszügiges Käuferbudget macht den Innenausbau zur eigenen Entscheidung, von der Küche bis zum Bad.</p>
           <div class="badge-wrap" id="hero-badges"></div>
         </div>
       </div>
@@ -287,7 +279,7 @@
           <div class="typo-info">
             <h4>Überschriften-Schriftart</h4>
             <div class="typo-font-name" id="typo-heading-name">Domine</div>
-            <div class="typo-preview-large">Sägeweg 53, Therwil</div>
+            <div class="typo-preview-large">Neubauprojekt Therwil</div>
           </div>
           <div class="typo-info">
             <h4>Fliesstext-Schriftart</h4>
@@ -301,21 +293,21 @@
     <!-- SECTION 4: Logo-Varianten (Platzhalter) -->
     <section id="mood-logos">
       <h2 class="section-title">Logo-Varianten</h2>
-      <p class="section-subtitle">Platzhalter — die eigentliche Logoentwicklung (Wortmarke, Signet, Kombination) folgt in der nächsten Phase, sobald ein Konzept gewählt ist.</p>
+      <p class="section-subtitle">Platzhalter für die spätere Logoentwicklung. Sie folgt in der nächsten Phase, sobald ein Konzept gewählt ist.</p>
       <div class="logo-cards-grid">
         <div class="logo-box-card">
           <div class="logo-placeholder-wrap"><span class="logo-placeholder-name" id="logo-name-1">Sägihof</span></div>
-          <div class="logo-placeholder-label">Wortmarke — Platzhalter</div>
+          <div class="logo-placeholder-label">Platzhalter</div>
           <div class="logo-placeholder-note">Logo folgt</div>
         </div>
         <div class="logo-box-card">
           <div class="logo-placeholder-wrap"><span class="logo-placeholder-name" id="logo-name-2">Sägihof</span></div>
-          <div class="logo-placeholder-label">Signet — Platzhalter</div>
+          <div class="logo-placeholder-label">Platzhalter</div>
           <div class="logo-placeholder-note">Logo folgt</div>
         </div>
         <div class="logo-box-card">
           <div class="logo-placeholder-wrap"><span class="logo-placeholder-name" id="logo-name-3">Sägihof</span></div>
-          <div class="logo-placeholder-label">Kombination — Platzhalter</div>
+          <div class="logo-placeholder-label">Platzhalter</div>
           <div class="logo-placeholder-note">Logo folgt</div>
         </div>
       </div>
@@ -347,7 +339,7 @@
     </section>
 
     <footer>
-      <p id="footer-text">&copy; 2026 Sägeweg 53, Therwil. Marken-Moodboard, Konzept „Sägihof“.</p>
+      <p id="footer-text">&copy; 2026 Therwil. Marken-Moodboard, Konzept „Sägihof“.</p>
     </footer>
   </main>
 
@@ -361,12 +353,13 @@
       'theme-saegihof': {
         name: 'Sägihof',
         tagline: 'Der Hof am Sägeweg.',
-        nameNote: 'Der Name nimmt die Lage am Sägeweg auf und verweist auf das Solitärgebäude in Holzbauweise – handwerklich, geerdet, mit sichtbarer Massstäblichkeit.',
-        badges: ['Holzbau-Solitär', 'Begrünter Innenhof', 'Photovoltaik', 'Individueller Ausbau'],
+        nameNote: 'Der Name leitet sich direkt von der Adresse am Sägeweg ab. Sägi klingt vertraut und schweizerisch, Hof steht für den gemeinsamen Garten in der Mitte der Gebäude. Ausserdem erinnert der Name an Holz, was gut zum vorderen Gebäude passt, das in Holzbauweise erstellt wird.',
+        badges: ['Holzfassade', 'Begrünter Innenhof', 'Photovoltaik', 'Individueller Ausbau'],
+        heroImage: 'assets/EXT-2_F-scaled.webp',
         headingFontLabel: 'Domine',
         bodyFontLabel: 'Karla',
         swatches: [
-          { role: 'Hauptfarbe',     name: 'Walnussbraun',     hex: '#4A3F35', desc: 'Erdig, geerdet – Referenz an die Holzbauweise des Solitärs.' },
+          { role: 'Hauptfarbe',     name: 'Walnussbraun',     hex: '#4A3F35', desc: 'Erdig und geerdet, mit Bezug zur Holzbauweise des vorderen Gebäudes.' },
           { role: 'Sekundärfarbe',  name: 'Taupe-Sand',       hex: '#A69386', desc: 'Warmer Naturton, ruhiger Kontrast zum dunklen Primärton.' },
           { role: 'Akzentfarbe',    name: 'Kupfer-Terracotta',hex: '#9C6440', desc: 'Gedeckter Kupferton, sparsam für Highlights und CTAs.' },
           { role: 'Hintergrund',    name: 'Kalkweiss',        hex: '#F2EEE7', desc: 'Warmes Off-White als ruhige Grundfläche.' },
@@ -376,8 +369,9 @@
       'theme-leimenpark': {
         name: 'Leimenpark',
         tagline: 'Grün mitten im Leimental.',
-        nameNote: 'Leimenpark verbindet die Region – das Leimental – mit dem parkähnlichen Innenhof, der als grüne Mitte der Überbauung dient.',
+        nameNote: 'Therwil liegt im Leimental und bietet viel Lebensqualität im Grünen. Park steht für den grossen, grünen Innenhof der Anlage. So klingt der Name nach Platz, Natur und Erholung direkt vor der Haustür.',
         badges: ['Begrünter Innenhof', 'Kinderspielplatz', 'Private Gärten', 'Individueller Ausbau'],
+        heroImage: 'assets/EXT-1_F-scaled.webp',
         headingFontLabel: 'Petrona',
         bodyFontLabel: 'Public Sans',
         swatches: [
@@ -391,29 +385,31 @@
       'theme-ensemble53': {
         name: 'Ensemble 53',
         tagline: 'Vier Häuser, ein Ensemble.',
-        nameNote: '53 steht für die Anzahl Wohnungen und Tiefgaragenplätze, Ensemble für das Zusammenspiel der vier Baukörper um den gemeinsamen Hof.',
-        badges: ['4 Baukörper', 'Barrierefrei nach SIA 500', 'Aluminium-Fensterrahmen', 'Tiefgarage, 53 Plätze'],
-        headingFontLabel: 'Piazzolla',
-        bodyFontLabel: 'Archivo',
+        nameNote: 'Ein Ensemble ist eine Gruppe von Gebäuden, die gut zusammenpassen, genau wie die vier Häuser dieses Projekts. Die Zahl 53 steht für die 53 Wohnungen der Überbauung. Der Name wirkt modern und betont das gute Zusammenleben.',
+        badges: ['4 Baukörper', 'Barrierefrei nach SIA 500', 'Gemeinsamer Innenhof', 'Tiefgarage, 53 Plätze'],
+        heroImage: 'assets/EXT-3_F-scaled.webp',
+        headingFontLabel: 'Frank Ruhl Libre',
+        bodyFontLabel: 'Work Sans',
         swatches: [
-          { role: 'Hauptfarbe',     name: 'Anthrazit',       hex: '#3E3A3A', desc: 'Zurückhaltender, urbaner Ankerton.' },
-          { role: 'Sekundärfarbe',  name: 'Warmgrau',        hex: '#BDB8B4', desc: 'Steinige Begleitfarbe für ruhige Flächen.' },
-          { role: 'Akzentfarbe',    name: 'Graphitblau',     hex: '#56636B', desc: 'Kühler Metallton, angelehnt an die Aluminium-Fensterrahmen.' },
-          { role: 'Hintergrund',    name: 'Steinlicht',      hex: '#DCD9D1', desc: 'Helle Steinfläche als Grundton.' },
-          { role: 'Kontrast',       name: 'Tiefschwarz-Warm',hex: '#211F1E', desc: 'Fliesstextfarbe, kein reines Schwarz.' }
+          { role: 'Hauptfarbe',     name: 'Warmtaupe-Braun', hex: '#6E5D50', desc: 'Zurückhaltender, urbaner Ankerton, warm statt kühl-grau.' },
+          { role: 'Sekundärfarbe',  name: 'Warmtaupe',       hex: '#A69386', desc: 'Warmer Sandton als ruhiger Begleiter zum Hauptton.' },
+          { role: 'Akzentfarbe',    name: 'Messing',         hex: '#7C6330', desc: 'Gedämpfter Messington für Details und CTAs, urban statt rustikal.' },
+          { role: 'Hintergrund',    name: 'Warmstein',       hex: '#E7E1D6', desc: 'Warme, helle Steinfläche als Grundton.' },
+          { role: 'Kontrast',       name: 'Tiefbraun-Warm',  hex: '#2A2726', desc: 'Fliesstextfarbe, kein reines Schwarz.' }
         ]
       },
       'theme-bizitherwil': {
         name: 'Bizi Therwil',
-        tagline: 'Dihei, bi Therwil.',
-        nameNote: 'Der Name holt den Alltag der Region in die Marke – unprätentiös, direkt, mit einem Augenzwinkern für alle, die in Therwil ankommen wollen.',
+        tagline: 'Schon immer ein Teil von Therwil.',
+        nameNote: 'Das Grundstück liegt im alten Flurgebiet Bizi. Der Name passt deshalb genau zum Ort und wirkt sehr natürlich. Er zeigt von Anfang an, dass das Projekt ein fester Teil von Therwil ist, ganz im Sinne des Wunsches nach einem echten Dorfgefühl.',
         badges: ['Nähe zu Basel', 'Kinderfreundliche Gemeinde', 'Aktives Vereinsleben', 'Individueller Ausbau'],
+        heroImage: 'assets/INT-2_F_v2-scaled.webp',
         headingFontLabel: 'Faustina',
         bodyFontLabel: 'IBM Plex Sans',
         swatches: [
           { role: 'Hauptfarbe',     name: 'Frühlingsgrün',   hex: '#5C7A5E', desc: 'Frischer, hellerer Grünton für ein zugängliches Auftreten.' },
           { role: 'Sekundärfarbe',  name: 'Helltaupe',       hex: '#C7B8A6', desc: 'Warme, helle Begleitfarbe.' },
-          { role: 'Akzentfarbe',    name: 'Ziegelterracotta',hex: '#B85A34', desc: 'Lebendiger Terracottaton für Akzente und CTAs.' },
+          { role: 'Akzentfarbe',    name: 'Ziegelterracotta',hex: '#A8502E', desc: 'Lebendiger Terracottaton für Akzente und CTAs.' },
           { role: 'Hintergrund',    name: 'Warmweiss',       hex: '#F8F4EC', desc: 'Helle, freundliche Grundfläche.' },
           { role: 'Kontrast',       name: 'Dunkelgrün-Braun',hex: '#2C332B', desc: 'Fliesstextfarbe, kein reines Schwarz.' }
         ]
@@ -428,13 +424,15 @@
       document.getElementById('hero-concept-tag').textContent = c.name;
       document.getElementById('hero-tagline').textContent = c.tagline;
       document.getElementById('hero-name-note').textContent = c.nameNote;
+      document.getElementById('hero-rendering-img').src = c.heroImage;
+      document.getElementById('hero-rendering-img').alt = 'Architektur-Visualisierung ' + c.name + ', Therwil';
       document.getElementById('typo-heading-name').textContent = c.headingFontLabel;
       document.getElementById('typo-body-name').textContent = c.bodyFontLabel;
       document.getElementById('ui-card-title').textContent = c.name;
       document.getElementById('logo-name-1').textContent = c.name;
       document.getElementById('logo-name-2').textContent = c.name;
       document.getElementById('logo-name-3').textContent = c.name;
-      document.getElementById('footer-text').innerHTML = '&copy; 2026 Sägeweg 53, Therwil. Marken-Moodboard, Konzept „' + c.name + '“.';
+      document.getElementById('footer-text').innerHTML = '&copy; 2026 Therwil. Marken-Moodboard, Konzept „' + c.name + '“.';
 
       document.getElementById('hero-badges').innerHTML = c.badges
         .map(b => `<span class="material-badge">${b}</span>`)
