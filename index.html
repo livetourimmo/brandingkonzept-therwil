@@ -67,6 +67,18 @@
     --border-radius: 20px;
   }
 
+  /* Konzept: BIZI THERWIL 2: gleiche Tonalitaet wie Bizi Therwil, Farbpalette Tannengruen/Gold */
+  .theme-bizitherwil2 {
+    --color-primary: #1F3B2C;
+    --color-secondary: #AEC0AF;
+    --color-accent: #806419;
+    --color-background: #F6F2E9;
+    --color-contrast: #1C2620;
+    --font-heading: 'Faustina', serif;
+    --font-body: 'IBM Plex Sans', sans-serif;
+    --border-radius: 20px;
+  }
+
   body {
     background-color: var(--color-background);
     color: var(--color-contrast);
@@ -244,6 +256,7 @@
       <button class="switch-btn" onclick="switchTheme('theme-leimenpark', this)">Leimenpark</button>
       <button class="switch-btn" onclick="switchTheme('theme-ensemble53', this)">Ensemble 53</button>
       <button class="switch-btn" onclick="switchTheme('theme-bizitherwil', this)">Bizi Therwil</button>
+      <button class="switch-btn" onclick="switchTheme('theme-bizitherwil2', this)">Bizi Therwil 2</button>
     </div>
   </header>
 
@@ -412,6 +425,22 @@
           { role: 'Akzentfarbe',    name: 'Ziegelterracotta',hex: '#A8502E', desc: 'Lebendiger Terracottaton für Akzente und CTAs.' },
           { role: 'Hintergrund',    name: 'Warmweiss',       hex: '#F8F4EC', desc: 'Helle, freundliche Grundfläche.' },
           { role: 'Kontrast',       name: 'Dunkelgrün-Braun',hex: '#2C332B', desc: 'Fliesstextfarbe, kein reines Schwarz.' }
+        ]
+      },
+      'theme-bizitherwil2': {
+        name: 'Bizi Therwil 2',
+        tagline: 'Schon immer ein Teil von Therwil.',
+        nameNote: 'Das Grundstück liegt im alten Flurgebiet Bizi. Der Name passt deshalb genau zum Ort und wirkt sehr natürlich. Er zeigt von Anfang an, dass das Projekt ein fester Teil von Therwil ist, ganz im Sinne des Wunsches nach einem echten Dorfgefühl.',
+        badges: ['Nähe zu Basel', 'Kinderfreundliche Gemeinde', 'Aktives Vereinsleben', 'Individueller Ausbau'],
+        heroImage: 'assets/INT-2_F_v2-scaled.webp',
+        headingFontLabel: 'Faustina',
+        bodyFontLabel: 'IBM Plex Sans',
+        swatches: [
+          { role: 'Hauptfarbe',     name: 'Tannengrün',      hex: '#1F3B2C', desc: 'Tiefes, edles Grün als Ankerton.' },
+          { role: 'Sekundärfarbe',  name: 'Helles Salbeigrün',hex: '#AEC0AF', desc: 'Helle, ruhige Begleitfarbe für Badges und Flächen.' },
+          { role: 'Akzentfarbe',    name: 'Antikgold',       hex: '#806419', desc: 'Warmer Goldton für Details und CTAs.' },
+          { role: 'Hintergrund',    name: 'Warmelfenbein',   hex: '#F6F2E9', desc: 'Helle, warme Grundfläche.' },
+          { role: 'Kontrast',       name: 'Tiefgrün-Schwarz',hex: '#1C2620', desc: 'Fliesstextfarbe, kein reines Schwarz.' }
         ]
       }
     };
